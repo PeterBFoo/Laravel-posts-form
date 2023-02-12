@@ -3,6 +3,7 @@
 return [
     'required_field' => 'This field is required.',
     'max_field' => 'This field is too long.',
+    'created_at' => 'Created at',
     'min_field' => 'This field is too short.',
     'email_field' => 'This field must be a valid email.',
     'password_field' => 'This field must be at least 8 characters long.',
