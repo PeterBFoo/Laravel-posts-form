@@ -15,7 +15,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <form class="bg-white p-6 rounded-lg" method="post" action="/post/store">
+                    <form class="bg-white p-6 rounded-lg" method="post" action="{{ route("post.store") }}">
                         @csrf
                         <label for="commentable">{{ __('post.commentable') }}</label>
                         <input class="w-1 border border-gray-400 p-2 rounded-lg" type="checkbox" name="commentable" id="commentable" {{ old('commentable') ? 'checked="checked"' : '' }}>

@@ -47,7 +47,7 @@
                         <br>
                         <br>
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" value="Edit post">
-                            <a href="{{ route('edit-post', $post->id) }}">{{ __('post.edit') }}</a>
+                            <a href="{{ route('post.edit', $post->id) }}">{{ __('post.edit') }}</a>
                         </button>
                     @endif
                 </div>

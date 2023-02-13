@@ -35,15 +35,15 @@ Route::get('/dashboard/profile/edit/password', [ProfileController::class, 'editP
 
 Route::get("/dashboard/posts", [PostController::class, 'index'])->middleware(['auth', 'verified'])->name('posts');
 
-Route::post('/post/store', [PostController::class, 'store'])->middleware(['auth', 'verified']);
+Route::post('/post/store', [PostController::class, 'store'])->middleware(['auth', 'verified'])->name("post.store");
 
-Route::get('/dashboard/post/edit/{id}', [PostController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit-post');
+Route::get('/dashboard/post/edit/{id}', [PostController::class, 'edit'])->middleware(['auth', 'verified'])->name('post.edit');
 
 Route::get('/dashboard/post/{id}', [PostController::class, 'show'])->middleware(['auth', 'verified'])->name('post');
 
-Route::post('/dashboard/post/update/{id}', [PostController::class, 'update'])->middleware(['auth', 'verified'])->name('update-post');
+Route::post('/dashboard/post/update/{id}', [PostController::class, 'update'])->middleware(['auth', 'verified'])->name('post.update');
 
-Route::delete('/dashboard/post/delete/{id}', [PostController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete-post');
+Route::delete('/dashboard/post/delete/{id}', [PostController::class, 'destroy'])->middleware(['auth', 'verified'])->name('post.delete');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

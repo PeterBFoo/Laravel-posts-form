@@ -63,7 +63,7 @@
                         <br>
                         <button class="bg-blue-500 hover:bg-blue-700 space-y-6 text-white font-bold py-2 px-4 rounded"> {{ __('post.publish') }}  </button>
                     </form>
-                    <form action="/dashboard/post/delete/{{$post->id}}" method="post">
+                    <form action="{{ route("post.delete", $post->id)}}" method="post">
                         @csrf
                         @method('delete')
                         <button class="bg-blue-500 hover:bg-blue-700 space-y-6 text-white font-bold py-2 px-4 rounded" type="submit"> {{ __('post.delete') }} </button>
