@@ -55,7 +55,7 @@
                             @if($user->id != $post->user_id)
                                 <li class="text-lg">
                                     <strong>
-                                        <a href="/dashboard/post/{{ $post->id }}">
+                                        <a href="{{route("post", $post->id)}}">
                                             {{ $post->title }}
                                         </a>
                                     </strong>
